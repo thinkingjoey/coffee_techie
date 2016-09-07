@@ -1,4 +1,4 @@
-var app = angular.module("jwt_auth", ['ui.router'])
+var app = angular.module("jwt_auth", ['ui.router', 'ui.materialize'])
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 

@@ -1,8 +1,50 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+header {
+  height: 560px;
+  background: url('https://hd.unsplash.com/photo-1452725210141-07dda20225ec')
+  no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*login on the navbar*/
+.Login{
+  background-color: pink;
+  float: right;
+  padding: 20px;
 }
 
-a {
-  color: #00B7FF;
+h1{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+#container{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+}
+
+/*title*/
+#title{
+  font-family: HanziPenSC-W3;
+  font-size: 75px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  clear: both;
+}
+/**/
+#subtitle {
+  font-family: 'Courier New';
+  font-size: 15px;
+  color: white;
 }
