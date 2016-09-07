@@ -1,50 +1,61 @@
-header {
-  height: 560px;
-  background: url('https://hd.unsplash.com/photo-1452725210141-07dda20225ec')
-  no-repeat center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
+#homeImg{
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
-/*login on the navbar*/
-.Login{
-  background-color: pink;
-  float: right;
-  padding: 20px;
-}
-
-h1{
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin: 0 auto;
-  z-index: 1;
+nav ul a,
+nav .brand-logo {
+  color: #444;
 }
 
-#container{
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 1;
+p {
+  line-height: 2rem;
 }
 
-/*title*/
-#title{
-  font-family: HanziPenSC-W3;
-  font-size: 75px;
-  color: white;
-  text-align: center;
-  z-index: 1;
-  clear: both;
+.button-collapse {
+  color: #26a69a;
 }
-/**/
-#subtitle {
-  font-family: 'Courier New';
-  font-size: 15px;
-  color: white;
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
 }
