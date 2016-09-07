@@ -2,9 +2,14 @@ var app = angular.module("jwt_auth", ['ui.router'])
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
- 	$urlRouterProvider.otherwise('/user')
+ 	$urlRouterProvider.otherwise('/')
 
 	$stateProvider
+    .state("home", {
+      url: "/",
+      controller: "HomeController as home",
+      templateUrl: "/partials/home.html",
+    })
 		.state('login', {
 			url: "/login",
 			controller: "LoginController as login",
@@ -21,6 +26,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				requireLogin: true
 			}
 		})
+
 })
 
 

@@ -1,9 +1,9 @@
 angular.module("jwt_auth")
 	.controller("UserController", UserController)
 
-UserController.$inject = ['$http']
+UserController.$inject = ['$http', '$state']
 
-function UserController ($http) {
+function UserController ($http, $state) {
 	var self = this
 
 	self.username = ''

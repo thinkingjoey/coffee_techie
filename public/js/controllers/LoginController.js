@@ -11,7 +11,10 @@ function LoginController ($http, $state) {
 	this.registerUsername = ''
 	this.registerPassword = ''
 	this.errors = ''
-
+  this.logout = function () {
+    localStorage.removeItem('token')
+    $state.go('login')
+  }
 	this.login = function () {
 		$http.post("/login", {
 			username: self.loginUsername,
