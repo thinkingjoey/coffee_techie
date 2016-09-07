@@ -1,0 +1,14 @@
+<div class ="container row">
+<div class="col s12 m6 push-m3">
+<div class="center-align">
+	Register <br><br><br>
+</div>
+
+
+<div id="register">
+	Username: <input ng-model="login.registerUsername">
+	Password: <input type="password" ng-model="login.registerPassword">
+	<button ng-click="login.register()">Register</button>
+</div>
+
+<div>{{ login.errors }}</div>

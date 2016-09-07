@@ -29,19 +29,4 @@ function LoginController ($http, $state) {
 			}
 		})
 	}
-
-	this.register = function () {
-		$http.post("/register", {
-			username: self.registerUsername,
-			password: self.registerPassword
-		}).then(function (response) {
-			if (response.data.error) {
-				self.errors = response.data.error
-			}
-			else if (response.data.token) {
-				localStorage.token = response.data.token
-				$state.go('user')
-			}
-		})
-	}
 }

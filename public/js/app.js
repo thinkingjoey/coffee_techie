@@ -21,6 +21,14 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				requireLogout: true
 			}
 		})
+    .state('Register', {
+      url: "/register",
+      controller: "RegisterController as register",
+      templateUrl: "/partials/register.html",
+      data: {
+        requireLogout: true
+      }
+    })
 		.state("user", {
 			url: "/user",
 			controller: "UserController as user",
