@@ -13,7 +13,7 @@ function LoginController ($http, $state) {
 	this.errors = ''
   this.logout = function () {
     localStorage.removeItem('token')
-    $state.go('login')
+    $state.go('home')
   }
 	this.login = function () {
 		$http.post("/login", {

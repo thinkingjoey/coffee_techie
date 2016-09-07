@@ -9,6 +9,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: "/",
       controller: "HomeController as home",
       templateUrl: "/partials/home.html",
+      data: {
+        requireLogin: false
+      }
     })
 		.state('login', {
 			url: "/login",

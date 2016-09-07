@@ -5,6 +5,5 @@ HomeController.$inject = ['$http', '$state']
 
 function HomeController ($http, $state) {
 	var self = this
-  $state.go('home')
 
 };
