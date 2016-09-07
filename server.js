@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./config/routes');
-var session = require('express-session');
+// var session = require('express-session');
 
 
 //load the env vars (what's this?)
