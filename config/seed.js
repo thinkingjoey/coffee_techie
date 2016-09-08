@@ -2,9 +2,9 @@ require('dotenv').load();
 var mongoose = require('./database');
 
 var Event = require('../models/Event')
-var User = require('../models/user');
+var User = require('../models/User');
 
-var Event = [{
+Event.create([{
     // fee: Number,
     fee: 20,
     // title: String,
@@ -14,15 +14,13 @@ var Event = [{
     // lookingFor: String,
     lookingFor: "Web Developers",
     // hostId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-    hostId: 2,
-    // eventDate: Date,
-    eventDate: "2016-05-06",
-    // startTime: Date,
-    startTime: "12:12:12",
-    // endTime: Date,
-    endTime: "13:12:12",
+    hostId: "57d056cd83fceb097a34efda",
+    // start time
+    startTime: new Date(2016,5,6,12,12,12),
+    // end time
+    endTime: new Date(2016,5,6,13,12,12),
     // description: String,
-    description: "We want to network with fellow Web Developers in L.A.",
+    description: "We want to network with local Web Developers in L.A.",
 
     // address: {
     //   address: String,
@@ -34,12 +32,17 @@ var Event = [{
 
     address: {
       address: "123 Coffee Ave",
-      addresS: "Suit 12",
+      address: "Suit 12",
       city: "Los Angeles",
       state: "CA",
       zip: 92111
     },
     // created_at: Date,
-    created_at: Data.now()
+    created_at: Date.now()
 
-}]
+}], function (err, events) {
+  if (err) console.log(err)
+
+  console.log(events)
+  process.exit()
+})

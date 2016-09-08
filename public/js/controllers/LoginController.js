@@ -5,6 +5,7 @@ LoginController.$inject = ['$http', '$state']
 
 function LoginController ($http, $state) {
 	var self = this
+	console.log("LoginController")
 
 	this.loginUsername = ''
 	this.loginPassword = ''

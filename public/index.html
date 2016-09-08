@@ -11,6 +11,19 @@
   <!-- CSS -->
 	<link rel="stylesheet" href="css/style.css">
 <body>
+	<nav class="white" role="navigation">
+	  <div class="nav-wrapper container">
+	    <a id="Login" href="#/home" class="brand-logo">Logo</a>
+	    <ul class="right hide-on-med-and-down">
+	      <li><a href="#/login">login</a></li>
+	    </ul>
+
+	    <ul id="nav-mobile" class="side-nav">
+	      <li><a href="#">Navbar Link</a></li>
+	    </ul>
+	    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+	  </div>
+	</nav>
 
 	<!-- Partials inserted here -->
 	<div ui-view></div>
@@ -27,6 +40,7 @@
 	<script src="/js/controllers/RegisterController.js"></script>
 	<script src="/js/controllers/UserController.js"></script>
 	<script src="/js/controllers/HomeController.js"></script>
+	<script src="/js/controllers/EventController.js"></script>
 
 </body>
 

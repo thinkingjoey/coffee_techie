@@ -9,8 +9,22 @@ function index(req, res, next) {
   });
 }
 
-function create () {
+function create(req, res, next) {
+  var newEvent  = new Event(req.body);
+  var userId    = req.decoded._id
+  newEvent.hostId = userId
+  newEvent.save(function(err, savedEvent) {
+    if (err) next(err);
 
+    User.findById(userId, function (err, user){
+      user.events.push(savedEvent._id)
+
+      user.save(function(err) {
+        if (err) next(err)
+        res.json(savedEvent);
+      })
+    })
+  });
 }
 
 
@@ -19,8 +33,8 @@ function show(req, res, next) {
 
   Event
     .findbyId(id)
-    .populate('hostID')
-    .exec().then(function(evet){
+    .populate('hostId')
+    .exec().then(function(event){
       res.json(event);
     })
     .catch(function (err) {
@@ -28,11 +42,13 @@ function show(req, res, next) {
     })
 }
 
-function update(){
-
-}
 
 function destroy(){
+  var id = req.params.id;
+  Event.remove({_id:id}, function (err){
+    if (err) next (err);
+    res.json({message: "Event deleted"});
+  })
 
 }
 
@@ -40,6 +56,5 @@ module.exports = {
 	index: index,
   create: create,
   show: show,
-  update: update,
   destroy: destroy
 }

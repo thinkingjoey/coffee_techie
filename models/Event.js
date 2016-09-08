@@ -7,8 +7,6 @@ var eventSchema  = mongoose.Schema({
   eventType: String,
   lookingFor: String,
   hostId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-
-  eventDate: Date,
   startTime: Date,
   endTime: Date,
   description: String,

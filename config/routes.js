@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 router.get('/events', eventController.index)
 router.post('/events', authController.verifyToken, eventController.create)
 router.get('/events/:id', eventController.show)
-router.put('/events/:id', authController.verifyToken, eventController.update)
+// router.put('/events/:id', authController.verifyToken, eventController.update)
 router.delete('/events/:id', authController.verifyToken, eventController.destroy)
 
 

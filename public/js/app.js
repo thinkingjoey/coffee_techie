@@ -1,9 +1,11 @@
 var app = angular.module("jwt_auth", ['ui.router'])
+console.log("app starting")
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
  	$urlRouterProvider.otherwise('/')
 
+  console.log("setting states")
 	$stateProvider
     .state("home", {
       url: "/",
@@ -21,7 +23,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				requireLogout: true
 			}
 		})
-    .state('Register', {
+    .state('register', {
       url: "/register",
       controller: "RegisterController as register",
       templateUrl: "/partials/register.html",
@@ -37,13 +39,40 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				requireLogin: true
 			}
 		})
+    //index all events
+    .state("event", {
+			url: "/events",
+			controller: "EventController as event",
+			templateUrl: "/partials/event.html",
+			data: {
+				requireLogin: true
+			}
+    })
+      // show event
+    .state("event.show", {
+			url: "/:id",
+			// controller: "EventController as event",
+			templateUrl: "/partials/eventShow.html",
+			data: {
+				requireLogin: true
+			}
+		})
+    // create event
+    .state("event.new", {
+      url: "/new",
+      // controller: "EventController as event",
+      templateUrl: "/partials/eventNew.html",
+      data: {
+        requireLogin: true
+      }
+    })
 
 })
 
 
 // state change interceptor
 app.run(function ($rootScope, $state) {
-
+  console.log("changing states")
 	$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
 		// Case 1: Access requireLogin page without a token
 		if (toState.data.requireLogin && !localStorage.token) {
