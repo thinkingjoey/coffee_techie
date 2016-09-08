@@ -21,11 +21,6 @@ function EventController ($http, $state) {
 		self.eventTypes = ["Conference", "Coffee Meetup", "Happy Hours", "Party", "Others"]
 	}
 }
-
-function EventShowController($http, $state){
-	console.log("event show")
-}
-
 function EventCreateController ($http, $state) {
 	console.log("event create")
 	var self = this;
@@ -55,4 +50,20 @@ function EventCreateController ($http, $state) {
 			}
 		})
 	}
+}
+
+function EventShowController($http, $state){
+	console.log("event show")
+	var self = this
+
+	self.events = []
+
+	$htttp({
+		url: '/events/' + id,
+		method: 'GET',
+		params: {}
+	}).then (function (response) {
+		self.events = response.data
+	})
+
 }

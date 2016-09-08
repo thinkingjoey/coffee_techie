@@ -48,7 +48,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				requireLogin: true
 			}
     })
-    // event list
+    // create
     .state("event.create", {
       url: "/new",
       controller: "EventCreateController as create",
