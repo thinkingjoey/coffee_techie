@@ -6,8 +6,7 @@ var eventSchema  = mongoose.Schema({
   title: String,
   eventType: String,
   lookingFor: String,
-  hostImgUrl: String,
-  hostId: {type: Schema.Types.ObjectId, ref: 'User'}
+  hostId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 
   eventDate: Date,
   startTime: Date,
@@ -21,8 +20,7 @@ var eventSchema  = mongoose.Schema({
     state: String,
     zip: Number
   },
-  created_at: Date,
-  updated_at: Date,
+  created_at: Date
 });
 
 var Event = mongoose.model('Event', eventSchema)
