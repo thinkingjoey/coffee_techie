@@ -1,26 +1,31 @@
 angular.module("jwt_auth")
 	.controller("EventController", EventController)
+	.controller("EventIndexController", EventIndexController)
 	.controller("EventCreateController", EventCreateController)
 	.controller("EventShowController", EventShowController)
 
 EventController.$inject = ['$http', '$state']
 
-// function ListingResource($resource) {
-// 	return $resource(
-// 			"/api/listings/:id",
-// 			{id: "@id"}
-// 		)
-// }
-
 function EventController ($http, $state) {
 	var self = this
 	console.log('event')
-	self.index = function (){
-		self.events =[]
 		//5 event types
 		self.eventTypes = ["Conference", "Coffee Meetup", "Happy Hours", "Party", "Others"]
-	}
 }
+
+function EventIndexController ($http, $state) {
+	var self = this
+		self.events = []
+		$http({
+			url: '/events',
+			method: 'GET',
+			params: {}
+		}).then(function (response) {
+			console.log(response.data)
+			self.events = response.data
+		})
+}
+
 function EventCreateController ($http, $state) {
 	console.log("event create")
 	var self = this;
@@ -58,7 +63,7 @@ function EventShowController($http, $state){
 
 	self.events = []
 
-	$htttp({
+	$http({
 		url: '/events/' + id,
 		method: 'GET',
 		params: {}
@@ -67,3 +72,28 @@ function EventShowController($http, $state){
 	})
 
 }
+
+
+
+
+//
+// function UserController ($http, $state) {
+// 	var self = this
+//
+// 	self.username = ''
+//
+// 	$http({
+// 		url: '/user',
+// 		method: 'GET',
+// 		params: {
+// 			token: localStorage.token
+// 		}
+// 	}).then(function (response) {
+// 		console.log(response)
+// 		self.username = response.data.username
+//
+// 		// stay away hackers!
+// 		if (response.data.message === "jwt malformed")
+// 			window.location = "https://c7.staticflickr.com/9/8166/29057776390_74fcea1b5e_o.jpg"
+// 	})
+// }
