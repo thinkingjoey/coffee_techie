@@ -1,0 +1,22 @@
+<div class="center-align">
+  <h4>Create a new event</h4>
+</div>
+
+<div class="container row">
+<div class="col s12 m8 push-m2">
+  <!-- Event -->
+  <div class="event-form">
+    Title: <input ng-model = "create.title">
+    Description: <input ng-model = "create.description">
+    EventType: <input ng-model ="create.eventType">
+    Fee: <input ng-model = "create.fee">
+    StartTime: <input ng-model = "create.startTime">
+    EndTime: <input ng-model = "create.endTime">
+    Location: <input ng-model = "create.location">
+    ImageUrl: <input ng-model = "create.imageUrl">
+
+    <button ng-click = "create.create()">Create event</button>
+  </div>
+
+</div>
+</div>

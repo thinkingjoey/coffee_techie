@@ -11,8 +11,6 @@ Event.create([{
     title: "Networking with Web Developer!",
     // eventType: String,
     eventType: "Party",
-    // lookingFor: String,
-    lookingFor: "Web Developers",
     // hostId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     hostId: "57d056cd83fceb097a34efda",
     // start time
@@ -30,13 +28,7 @@ Event.create([{
     //   zip: Number
     // },
 
-    address: {
-      address: "123 Coffee Ave",
-      address: "Suit 12",
-      city: "Los Angeles",
-      state: "CA",
-      zip: 92111
-    },
+    location: "123 ave, Los Angeles, CA 91212",
     // created_at: Date,
     created_at: Date.now()
 

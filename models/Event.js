@@ -5,19 +5,11 @@ var eventSchema  = mongoose.Schema({
   imageUrl: String,
   title: String,
   eventType: String,
-  lookingFor: String,
   hostId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
   startTime: Date,
   endTime: Date,
   description: String,
-
-  address: {
-    address: String,
-    address2: String,
-    city: String,
-    state: String,
-    zip: Number
-  },
+  location: String,
   created_at: Date
 });
 
