@@ -1,16 +1,16 @@
 var mongoose = require('mongoose');
 
 var eventSchema  = mongoose.Schema({
-  fee: Number,
+  fee: String,
   imageUrl: String,
   title: String,
   eventType: String,
   hostId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-  startTime: Date,
-  endTime: Date,
+  startTime: String,
+  endTime: String,
   description: String,
   location: String,
-  created_at: Date
+  created_at: String
 });
 
 var Event = mongoose.model('Event', eventSchema)

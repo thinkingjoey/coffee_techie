@@ -39,7 +39,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				requireLogin: true
 			}
 		})
-    //mother events
+    //mother events (index)
     .state("event", {
 			url: "/events",
 			controller: "EventController as event",
@@ -48,15 +48,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				requireLogin: true
 			}
     })
-    //   // show event
-    // .state("event.show", {
-		// 	url: "/:id",
-		// 	controller: "EventShowController as eventShow",
-		// 	templateUrl: "/partials/eventShow.html",
-		// 	data: {
-		// 		requireLogin: true
-		// 	}
-		// })
     // event list
     .state("event.create", {
       url: "/new",
@@ -66,6 +57,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         requireLogin: true
       }
     })
+    //   // show event
+    .state("event.show", {
+			url: "/:id",
+			controller: "EventShowController as eventShow",
+			templateUrl: "/partials/eventShow.html",
+			data: {
+				requireLogin: true
+			}
+		})
 
 })
 

@@ -11,11 +11,13 @@ function index(req, res, next) {
 
 function create(req, res, next) {
   var newEvent  = new Event(req.body);
-  var userId    = req.decoded._id
+  console.log(req.token._doc)
+  var userId    = req.token._doc._id
   newEvent.hostId = userId
+  console.log(newEvent)
   newEvent.save(function(err, savedEvent) {
-    if (err) next(err);
-
+    if (err) res.json(err);
+    console.log('saved')
     User.findById(userId, function (err, user){
       user.events.push(savedEvent._id)
 
