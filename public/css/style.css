@@ -1,4 +1,4 @@
-#header {
+/*.header {
   height: 560px;
   background: url('../assets/cover.jpg')
   no-repeat center fixed;
@@ -24,7 +24,7 @@
   text-align: center;
   z-index: 1;
   clear: both;
-}
+}*/
 
 
 h1{
@@ -45,7 +45,7 @@ nav .brand-logo {
 p {
   line-height: 2rem;
 }
-
+/*
 .button-collapse {
   color: #26a69a;
 }
@@ -74,7 +74,7 @@ p {
   #index-banner .section {
     top: 0;
   }
-}
+}*/
 
 /*.icon-block {
   padding: 0 15px;
