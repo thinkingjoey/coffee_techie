@@ -68,12 +68,20 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     //  show event
     .state("event.show", {
 			url: "/:id",
-			controller: "EventShowController as eventShow",
+			controller: "EventShowController as Show",
 			templateUrl: "/partials/eventShow.html",
 			data: {
 				requireLogin: true
 			}
 		})
+    .state("event.delete", {
+      url: "/index",
+      controller: "EventDeleteController as Delete",
+      // templateUrl: "/partials/eventShow.html",
+      data: {
+        requireLogin: true
+      }
+    })
 
 })
 

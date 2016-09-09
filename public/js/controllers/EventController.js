@@ -3,6 +3,7 @@ angular.module("jwt_auth")
 	.controller("EventIndexController", EventIndexController)
 	.controller("EventCreateController", EventCreateController)
 	.controller("EventShowController", EventShowController)
+	.controller("EventDeleteController", EventDeleteController)
 
 EventController.$inject = ['$http', '$state']
 
@@ -51,7 +52,7 @@ function EventCreateController ($http, $state) {
 			if (response.data.error) throw (err)
 			else if (response.data) {
 				console.log(response.data)
-				$state.go('event')
+				$state.go('event.index')
 			}
 		})
 	}
@@ -69,6 +70,17 @@ function EventShowController($http, $state){
 	}).then (function (response) {
 		self.events = response.data
 	})
+}
+
+function EventDeleteController(id) {
+	if (window.confirm("delete this?")){
+		EventResource
+			.delete({id: id})
+			.$promise.then(function(res){
+				Materialize.toast(res.message,4000)
+				this.$router.navigateByUrl('/events/index')
+			})
+	}
 }
 
 //

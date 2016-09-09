@@ -1,6 +1,6 @@
-/*.header {
-  height: 560px;
-  background: url('../assets/cover.jpg')
+.header {
+  height: 580px;
+  background: url('https://hd.unsplash.com/photo-1455734729978-db1ae4f687fc')
   no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -18,13 +18,13 @@
   z-index: 1;
 }
 #title{
-  font-family: HanziPenSC-W3;
-  font-size: 75px;
-  color: white;
+  font-family:'Lobster', cursive;
+  font-size: 6em;
+  color: #cc8800;
   text-align: center;
   z-index: 1;
   clear: both;
-}*/
+}
 
 
 h1{
@@ -45,74 +45,3 @@ nav .brand-logo {
 p {
   line-height: 2rem;
 }
-/*
-.button-collapse {
-  color: #26a69a;
-}
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}*/
-
-/*.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
-}
-
-.card .host-img {
-  margin-top: -68px;
-  z-index: 1;
-  position: relative;
-}
-
-.card .host-img img {
-  border: 2px solid white;
-  opacity: 0;
-}
-
-.strikeout {
-  text-decoration: line-through;
-}
-
-.side-nav .indented li {
-  padding-left: 10px;
-}
-
-
-.card .card-image {
-  height: 200px;
-}
-
-.card .card-image img {
-  height: 100%;
-  width: auto;
-  margin: 0 auto;
-}*/
