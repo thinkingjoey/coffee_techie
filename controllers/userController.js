@@ -1,4 +1,4 @@
-var User = require('../models/user')
+var User = require('../models/User')
 
 function user (req, res, next) {
 	console.log(req.token)
