@@ -1,3 +1,42 @@
+#header {
+  height: 560px;
+  background: url('../assets/cover.jpg')
+  no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+}
+#title{
+  font-family: HanziPenSC-W3;
+  font-size: 75px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  clear: both;
+}
+
+
+h1{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -37,7 +76,7 @@ p {
   }
 }
 
-.icon-block {
+/*.icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
@@ -76,4 +115,4 @@ footer.page-footer {
   height: 100%;
   width: auto;
   margin: 0 auto;
-}
+}*/

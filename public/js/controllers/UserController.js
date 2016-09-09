@@ -4,7 +4,12 @@ angular.module("jwt_auth")
 UserController.$inject = ['$http', '$state']
 
 function UserController ($http, $state) {
+
 	var self = this
+	this.logout = function () {
+    localStorage.removeItem('token')
+    $state.go('home')
+  }
 
 	self.username = ''
 

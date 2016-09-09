@@ -15,15 +15,15 @@ function EventController ($http, $state) {
 
 function EventIndexController ($http, $state) {
 	var self = this
-		self.events = []
-		$http({
-			url: '/events',
-			method: 'GET',
-			params: {}
-		}).then(function (response) {
-			console.log(response.data)
-			self.events = response.data
-		})
+	self.events = []
+	$http({
+		url: '/events',
+		method: 'GET',
+		params: {}
+	}).then(function (response) {
+		console.log(response.data)
+		self.events = response.data
+	})
 }
 
 function EventCreateController ($http, $state) {
@@ -62,7 +62,6 @@ function EventShowController($http, $state){
 	var self = this
 
 	self.events = []
-
 	$http({
 		url: '/events/' + id,
 		method: 'GET',
@@ -70,11 +69,7 @@ function EventShowController($http, $state){
 	}).then (function (response) {
 		self.events = response.data
 	})
-
 }
-
-
-
 
 //
 // function UserController ($http, $state) {
