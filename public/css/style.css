@@ -26,7 +26,6 @@
   clear: both;
 }
 
-
 h1{
   text-align: center;
   margin-left: auto;
@@ -35,8 +34,6 @@ h1{
   z-index: 1;
 }
 
-
-
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -44,4 +41,15 @@ nav .brand-logo {
 
 p {
   line-height: 2rem;
+}
+
+
+.card .card-image {
+  height: 200px;
+}
+
+.card .card-image img {
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
 }

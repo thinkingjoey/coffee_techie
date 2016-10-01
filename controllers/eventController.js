@@ -45,7 +45,7 @@ function show(req, res, next) {
 }
 
 
-function destroy(){
+function destroy(req, res, next){
   var id = req.params.id;
   Event.remove({_id:id}, function (err){
     if (err) next (err);
